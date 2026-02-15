@@ -1,0 +1,194 @@
+{
+  "nav": {
+    "services": "Operations",
+    "portfolio": "Missions",
+    "blog": "Intelligence",
+    "contact": "Command Center",
+    "cta": "Request Briefing"
+  },
+  "hero": {
+    "badge": "Active Digital Strategist",
+    "title": "Your <highlight>digital mission</highlight> starts here",
+    "subtitle": "Data-driven digital combat strategies. SEO, SEM, web design and analytics to conquer your market.",
+    "ctaPrimary": "Request briefing",
+    "ctaSecondary": "View completed missions",
+    "stats": {
+      "projects": "+150",
+      "projectsLabel": "SEO Missions",
+      "clients": "+50",
+      "clientsLabel": "Active Allies",
+      "traffic": "+200%",
+      "trafficLabel": "Territory Conquered",
+      "years": "+8",
+      "yearsLabel": "Years in Service"
+    }
+  },
+  "trust": {
+    "title": "STRATEGIC ALLIES"
+  },
+  "services": {
+    "badge": "Operations Arsenal",
+    "title": "Tactical operations that <highlight>conquer markets</highlight>",
+    "subtitle": "Every mission is unique. I combine strategy, data intelligence and precise execution to achieve your business objectives.",
+    "cta": "Launch operation",
+    "items": {
+      "seo": {
+        "title": "Op. Reconnaissance",
+        "subtitle": "Organic SEO",
+        "description": "Search engine positioning missions. Technical audits, content strategy and link building to dominate your digital territory."
+      },
+      "sem": {
+        "title": "Op. Precision",
+        "subtitle": "SEM / Google Ads",
+        "description": "Surgical Google advertising strikes optimized for maximum ROI with competitive cost per click."
+      },
+      "webDesign": {
+        "title": "Op. Engineering",
+        "subtitle": "Web Design UX/UI",
+        "description": "Building user-centered digital fortresses. Interfaces that convert visitors into loyal allies."
+      },
+      "socialMedia": {
+        "title": "Op. Communications",
+        "subtitle": "Social Media",
+        "description": "Comprehensive communications channel management. Content strategy, planning and tactical community management."
+      },
+      "analytics": {
+        "title": "Op. Intelligence",
+        "subtitle": "Data Analytics",
+        "description": "Intelligence center with GA4, command dashboards and data analysis for decisions based on real field information."
+      },
+      "webDev": {
+        "title": "Op. Deployment",
+        "subtitle": "Web Development",
+        "description": "Web infrastructure deployment with cutting-edge technologies. Fast, accessible and performance-optimized sites."
+      }
+    }
+  },
+  "about": {
+    "badge": "Classified File",
+    "title": "+8 years in active service",
+    "bio1": "I'm José Gilarte, a digital marketing strategist and web developer with over 8 years of experience on the digital battlefield, helping businesses conquer new territories.",
+    "bio2": "My approach combines data-driven intelligence with tactical execution and an obsession for measurable results. Every mission I take on has a clear objective: generate real impact.",
+    "bio3": "From technical SEO reconnaissance to designing comprehensive marketing operations, I ensure every action has a strategic purpose and a verifiable return.",
+    "credentialsTitle": "Decorations",
+    "credentials": {
+      "google": "Google Certification (Superior Rank)",
+      "wordpress": "Official WordPress Alliance",
+      "projects": "+150 missions completed",
+      "trainer": "Digital combat instructor"
+    },
+    "ctaCV": "Download dossier"
+  },
+  "portfolio": {
+    "badge": "Completed Missions",
+    "title": "Objectives achieved",
+    "subtitle": "Real results on the digital battlefield. Every mission tells a story of conquest.",
+    "filterAll": "All",
+    "filterSEO": "SEO",
+    "filterDesign": "Web Design",
+    "filterSEM": "SEM",
+    "filterSocial": "Social Media",
+    "viewCase": "View report"
+  },
+  "ctaBanner": {
+    "title": "Is your target in <highlight>the crosshairs</highlight>?",
+    "subtitle": "Don't let your competition take positions. Every day without strategy is lost territory. We aim, execute, and conquer.",
+    "cta": "Request tactical briefing"
+  },
+  "testimonials": {
+    "badge": "Field Reports",
+    "title": "What our allies say",
+    "subtitle": "Verified testimonials from successfully completed operations.",
+    "classification": "CONFIDENTIAL",
+    "fieldReport": "FIELD REPORT",
+    "codename": "Codename",
+    "verified": "VERIFIED",
+    "items": {
+      "t1": {
+        "quote": "Since José took over our SEO strategy, organic traffic skyrocketed by 180%. His tactical, results-oriented approach positioned us in the top 3 for our main keywords.",
+        "name": "Ricardo Sánchez",
+        "role": "Director",
+        "company": "R Sanchez Abogados",
+        "date": "2024-03",
+        "result": "+180% traffic"
+      },
+      "t2": {
+        "quote": "Social media management and SEM campaigns completely transformed our business. Engagement multiplied and online bookings grew exponentially.",
+        "name": "Marco Pellegrini",
+        "role": "Founder",
+        "company": "Pizzon Pizza",
+        "date": "2024-06",
+        "result": "+250% engagement"
+      },
+      "t3": {
+        "quote": "Professional, strategic and with an impressive command of technical SEO. José took our consulting project to another level with measurable results from the first month.",
+        "name": "Ana Beltrán",
+        "role": "CEO",
+        "company": "AB Consulting",
+        "date": "2024-09",
+        "result": "-60% bounce"
+      }
+    }
+  },
+  "blog": {
+    "badge": "Intelligence Room",
+    "title": "Digital intelligence reports",
+    "subtitle": "Reports, tactical guides and resources to dominate the digital battlefield.",
+    "readMore": "Read report",
+    "viewAll": "View all reports",
+    "minRead": "min read"
+  },
+  "contact": {
+    "badge": "Command Center",
+    "title": "Ready for the next mission?",
+    "subtitle": "Transmit the details of your operation and you'll receive a response within 24 hours.",
+    "form": {
+      "name": "Codename",
+      "namePlaceholder": "Your name",
+      "email": "Secure channel (email)",
+      "emailPlaceholder": "you@email.com",
+      "phone": "Direct frequency (phone)",
+      "phonePlaceholder": "+34 XXX XXX XXX",
+      "service": "Operation type",
+      "servicePlaceholder": "Select an operation",
+      "serviceOptions": {
+        "seo": "Op. Reconnaissance (SEO)",
+        "sem": "Op. Precision (SEM)",
+        "webDesign": "Op. Engineering (Web Design)",
+        "socialMedia": "Op. Communications (Social)",
+        "analytics": "Op. Intelligence (Analytics)",
+        "webDev": "Op. Deployment (Development)"
+      },
+      "message": "Mission briefing",
+      "messagePlaceholder": "Describe your operation objectives...",
+      "submit": "Transmit message",
+      "sending": "Transmitting...",
+      "success": "Message received at Command Center. Response incoming.",
+      "error": "Transmission error. Retry the send."
+    },
+    "infoTitle": "Communications Channel",
+    "info": {
+      "emailLabel": "Secure channel",
+      "email": "hola@josegilarte.es",
+      "phoneLabel": "Direct frequency",
+      "phone": "+34 XXX XXX XXX",
+      "locationLabel": "Operations base",
+      "location": "Seville, Spain",
+      "scheduleLabel": "Operative hours",
+      "schedule": "Mon - Fri: 09:00 - 18:00"
+    },
+    "calendly": {
+      "title": "Request a direct briefing?",
+      "subtitle": "Book a 30-minute tactical video call to plan your operation.",
+      "cta": "Request briefing"
+    }
+  },
+  "footer": {
+    "tagline": "Digital Strategist | SEO & Combat Marketing",
+    "base": "Operations Base: Seville, Spain",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "legal": "Legal Notice",
+    "cookies": "Cookies"
+  }
+}

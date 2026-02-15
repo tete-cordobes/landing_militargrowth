@@ -1,0 +1,194 @@
+{
+  "nav": {
+    "services": "Operaciones",
+    "portfolio": "Misiones",
+    "blog": "Inteligencia",
+    "contact": "Centro de Mando",
+    "cta": "Solicitar Briefing"
+  },
+  "hero": {
+    "badge": "Estratega Digital en Activo",
+    "title": "Tu <highlight>misión digital</highlight> comienza aquí",
+    "subtitle": "Estrategias de combate digital basadas en datos. SEO, SEM, diseño web y analítica para conquistar tu mercado.",
+    "ctaPrimary": "Solicitar briefing",
+    "ctaSecondary": "Ver misiones completadas",
+    "stats": {
+      "projects": "+150",
+      "projectsLabel": "Misiones SEO",
+      "clients": "+50",
+      "clientsLabel": "Aliados activos",
+      "traffic": "+200%",
+      "trafficLabel": "Territorio conquistado",
+      "years": "+8",
+      "yearsLabel": "Años en servicio"
+    }
+  },
+  "trust": {
+    "title": "ALIADOS ESTRATÉGICOS"
+  },
+  "services": {
+    "badge": "Arsenal de Operaciones",
+    "title": "Operaciones tácticas que <highlight>conquistan mercados</highlight>",
+    "subtitle": "Cada misión es única. Combino estrategia, inteligencia de datos y ejecución precisa para alcanzar los objetivos de tu negocio.",
+    "cta": "Iniciar operación",
+    "items": {
+      "seo": {
+        "title": "Op. Reconocimiento",
+        "subtitle": "SEO Orgánico",
+        "description": "Misiones de posicionamiento en buscadores. Auditorías técnicas, estrategia de contenidos y link building para dominar tu territorio digital."
+      },
+      "sem": {
+        "title": "Op. Precisión",
+        "subtitle": "SEM / Google Ads",
+        "description": "Ataques quirúrgicos de publicidad en Google optimizados para máximo retorno de inversión con coste por clic competitivo."
+      },
+      "webDesign": {
+        "title": "Op. Ingeniería",
+        "subtitle": "Diseño Web UX/UI",
+        "description": "Construcción de fortalezas digitales centradas en el usuario. Interfaces que convierten visitantes en aliados fieles."
+      },
+      "socialMedia": {
+        "title": "Op. Comunicaciones",
+        "subtitle": "Redes Sociales",
+        "description": "Gestión integral de canales de comunicación. Estrategia de contenidos, planificación y community management táctico."
+      },
+      "analytics": {
+        "title": "Op. Inteligencia",
+        "subtitle": "Analítica de Datos",
+        "description": "Centro de inteligencia con GA4, dashboards de mando y análisis de datos para decisiones basadas en información real del campo."
+      },
+      "webDev": {
+        "title": "Op. Despliegue",
+        "subtitle": "Desarrollo Web",
+        "description": "Despliegue de infraestructura web con las últimas tecnologías. Sitios rápidos, accesibles y optimizados para máximo rendimiento."
+      }
+    }
+  },
+  "about": {
+    "badge": "Expediente Clasificado",
+    "title": "+8 años en servicio activo",
+    "bio1": "Soy José Gilarte, estratega de marketing digital y desarrollo web con más de 8 años de experiencia en el campo de batalla digital, ayudando a empresas a conquistar nuevos territorios.",
+    "bio2": "Mi enfoque combina inteligencia basada en datos con ejecución táctica y una obsesión por los resultados medibles. Cada misión que asumo tiene un objetivo claro: generar impacto real.",
+    "bio3": "Desde reconocimientos SEO técnicos hasta el diseño de operaciones de marketing integrales, me encargo de que cada acción tenga un propósito estratégico y un retorno verificable.",
+    "credentialsTitle": "Condecoraciones",
+    "credentials": {
+      "google": "Certificación Google (Rango Superior)",
+      "wordpress": "Alianza oficial WordPress",
+      "projects": "+150 misiones completadas",
+      "trainer": "Instructor de combate digital"
+    },
+    "ctaCV": "Descargar expediente"
+  },
+  "portfolio": {
+    "badge": "Misiones Completadas",
+    "title": "Objetivos cumplidos",
+    "subtitle": "Resultados reales en el campo de batalla digital. Cada misión cuenta una historia de conquista.",
+    "filterAll": "Todas",
+    "filterSEO": "SEO",
+    "filterDesign": "Diseño Web",
+    "filterSEM": "SEM",
+    "filterSocial": "Redes Sociales",
+    "viewCase": "Ver informe"
+  },
+  "ctaBanner": {
+    "title": "¿Tu objetivo está en <highlight>el punto de mira</highlight>?",
+    "subtitle": "No dejes que tu competencia tome posiciones. Cada día sin estrategia es territorio perdido. Apuntamos, ejecutamos y conquistamos.",
+    "cta": "Solicitar briefing táctico"
+  },
+  "testimonials": {
+    "badge": "Reportes de Campo",
+    "title": "Lo que dicen nuestros aliados",
+    "subtitle": "Testimonios verificados de operaciones completadas con éxito.",
+    "classification": "CONFIDENCIAL",
+    "fieldReport": "REPORTE DE CAMPO",
+    "codename": "Nombre en clave",
+    "verified": "VERIFICADO",
+    "items": {
+      "t1": {
+        "quote": "Desde que José asumió nuestra estrategia SEO, el tráfico orgánico se disparó un 180%. Su enfoque táctico y orientado a resultados nos posicionó en el top 3 para nuestras keywords principales.",
+        "name": "Ricardo Sánchez",
+        "role": "Director",
+        "company": "R Sanchez Abogados",
+        "date": "2024-03",
+        "result": "+180% tráfico"
+      },
+      "t2": {
+        "quote": "La gestión de redes sociales y campañas SEM transformó completamente nuestro negocio. El engagement se multiplicó y las reservas online crecieron de forma exponencial.",
+        "name": "Marco Pellegrini",
+        "role": "Fundador",
+        "company": "Pizzon Pizza",
+        "date": "2024-06",
+        "result": "+250% engagement"
+      },
+      "t3": {
+        "quote": "Profesional, estratégico y con un dominio impresionante del SEO técnico. José llevó nuestro proyecto de consultoría a otro nivel con resultados medibles desde el primer mes.",
+        "name": "Ana Beltrán",
+        "role": "CEO",
+        "company": "AB Consulting",
+        "date": "2024-09",
+        "result": "-60% rebote"
+      }
+    }
+  },
+  "blog": {
+    "badge": "Sala de Inteligencia",
+    "title": "Reportes de inteligencia digital",
+    "subtitle": "Informes, guías tácticas y recursos para dominar el campo de batalla digital.",
+    "readMore": "Leer informe",
+    "viewAll": "Ver todos los reportes",
+    "minRead": "min de lectura"
+  },
+  "contact": {
+    "badge": "Centro de Mando",
+    "title": "¿Listo para la siguiente misión?",
+    "subtitle": "Transmite los detalles de tu operación y recibirás respuesta en menos de 24 horas.",
+    "form": {
+      "name": "Nombre en clave",
+      "namePlaceholder": "Tu nombre",
+      "email": "Canal seguro (email)",
+      "emailPlaceholder": "tu@email.com",
+      "phone": "Frecuencia directa (teléfono)",
+      "phonePlaceholder": "+34 XXX XXX XXX",
+      "service": "Tipo de operación",
+      "servicePlaceholder": "Selecciona una operación",
+      "serviceOptions": {
+        "seo": "Op. Reconocimiento (SEO)",
+        "sem": "Op. Precisión (SEM)",
+        "webDesign": "Op. Ingeniería (Diseño Web)",
+        "socialMedia": "Op. Comunicaciones (RRSS)",
+        "analytics": "Op. Inteligencia (Analítica)",
+        "webDev": "Op. Despliegue (Desarrollo)"
+      },
+      "message": "Briefing de la misión",
+      "messagePlaceholder": "Describe los objetivos de tu operación...",
+      "submit": "Transmitir mensaje",
+      "sending": "Transmitiendo...",
+      "success": "Mensaje recibido en el Centro de Mando. Respuesta en breve.",
+      "error": "Error en la transmisión. Reintenta el envío."
+    },
+    "infoTitle": "Canal de Comunicaciones",
+    "info": {
+      "emailLabel": "Canal seguro",
+      "email": "hola@josegilarte.es",
+      "phoneLabel": "Frecuencia directa",
+      "phone": "+34 XXX XXX XXX",
+      "locationLabel": "Base de operaciones",
+      "location": "Sevilla, España",
+      "scheduleLabel": "Horario operativo",
+      "schedule": "Lun - Vie: 09:00 - 18:00"
+    },
+    "calendly": {
+      "title": "¿Solicitar briefing directo?",
+      "subtitle": "Agenda una videollamada táctica de 30 minutos para planificar tu operación.",
+      "cta": "Solicitar briefing"
+    }
+  },
+  "footer": {
+    "tagline": "Estratega Digital | SEO & Marketing de Combate",
+    "base": "Base de Operaciones: Sevilla, España",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "legal": "Aviso Legal",
+    "cookies": "Cookies"
+  }
+}
