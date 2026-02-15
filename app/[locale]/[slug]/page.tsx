@@ -14,7 +14,7 @@ import { getServiceContent, getSectionLabels } from "@/lib/geo/content";
 import { generateGeoSchema } from "@/lib/geo/seo";
 import { LeadForm } from "@/components/geo/lead-form";
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
