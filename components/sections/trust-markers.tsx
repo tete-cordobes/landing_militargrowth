@@ -4,14 +4,18 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const CLIENTS = [
-  "R Sanchez Abogados",
+  "UMILES Group",
+  "SinVello!",
+  "Iberfurgo",
+  "Ratpanat",
+  "CEDEU",
+  "Vigar",
+  "La Formica Edile",
+  "Belair Sedie",
   "Pizzon Pizza",
-  "AB Consulting",
-  "Data SEO",
-  "Sin Vello",
-  "TechStart",
-  "DigitalBoost",
-  "GrowthLab",
+  "Alicia Bravo",
+  "Data SEO Academy",
+  "ENAE Business School",
 ] as const;
 
 export function TrustMarkers() {

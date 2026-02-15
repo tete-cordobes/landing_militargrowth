@@ -10,77 +10,120 @@ import Image from "next/image";
 type Project = {
   id: number;
   name: string;
-  initials: string;
+  logo: string;
   categories: string[];
   result: string;
+  url: string;
   gradient: string;
 };
 
 const PROJECTS: Project[] = [
   {
     id: 1,
-    name: "R Sanchez Abogados",
-    categories: ["SEO", "Diseño Web"],
-    result: "+180% territorio",
-    initials: "RS",
+    name: "CEDEU",
+    logo: "/logos/cedeu.png",
+    categories: ["SEM"],
+    result: "+60K€/día en Ads",
+    url: "https://cedeu.es",
     gradient: "from-[oklch(0.32_0.08_260)] to-[oklch(0.45_0.10_260)]",
   },
   {
     id: 2,
-    name: "Pizzon Pizza",
-    categories: ["Redes Sociales", "SEM"],
-    result: "+250% engagement",
-    initials: "PP",
-    gradient: "from-[oklch(0.40_0.10_83)] to-[oklch(0.55_0.12_83)]",
-  },
-  {
-    id: 3,
-    name: "Data SEO",
-    categories: ["SEO"],
-    result: "Top 3 objetivos",
-    initials: "DS",
+    name: "UMILES Group",
+    logo: "/logos/umiles.svg",
+    categories: ["SEO", "Desarrollo Web", "Automatización"],
+    result: "Ecosistema integrado",
+    url: "https://umilesgroup.com",
     gradient: "from-[oklch(0.28_0.06_260)] to-[oklch(0.40_0.08_260)]",
   },
   {
+    id: 3,
+    name: "SinVello!",
+    logo: "/logos/sinvello.png",
+    categories: ["SEO", "Automatización"],
+    result: "Organic growth",
+    url: "https://sinvelloporlaser.es",
+    gradient: "from-[oklch(0.40_0.10_83)] to-[oklch(0.55_0.12_83)]",
+  },
+  {
     id: 4,
-    name: "Sin Vello",
-    categories: ["SEO", "SEM"],
-    result: "+120% conversiones",
-    initials: "SV",
+    name: "Pizzon Pizza",
+    logo: "/logos/pizzon.png",
+    categories: ["SEO", "Automatización"],
+    result: "SEO Local + Reseñas",
+    url: "https://pizzonpizza.com",
     gradient: "from-[oklch(0.30_0.07_260)] to-[oklch(0.45_0.10_83)]",
   },
   {
     id: 5,
-    name: "AB Consulting",
-    categories: ["Diseño Web", "SEO"],
-    result: "-60% bajas",
-    initials: "AB",
+    name: "Iberfurgo",
+    logo: "/logos/iberfurgo.png",
+    categories: ["SEO", "Desarrollo Web"],
+    result: "SEO + Web nueva",
+    url: "https://iberfurgo.com",
     gradient: "from-[oklch(0.30_0.06_260)] to-[oklch(0.42_0.08_170)]",
   },
   {
     id: 6,
-    name: "TechStart",
-    categories: ["SEM", "Redes Sociales"],
-    result: "+300% leads",
-    initials: "TS",
+    name: "Ratpanat",
+    logo: "/logos/ratpanat.png",
+    categories: ["Desarrollo Web", "Automatización"],
+    result: "Web + Flujos IA",
+    url: "https://ratpanat.com",
     gradient: "from-[oklch(0.35_0.08_170)] to-[oklch(0.45_0.09_260)]",
+  },
+  {
+    id: 7,
+    name: "La Formica Edile",
+    logo: "/logos/formica.png",
+    categories: ["SEO", "Automatización"],
+    result: "Growth + Procesos",
+    url: "https://laformicaedile.it",
+    gradient: "from-[oklch(0.28_0.07_145)] to-[oklch(0.42_0.10_145)]",
+  },
+  {
+    id: 8,
+    name: "Belair Sedie",
+    logo: "/logos/belair.png",
+    categories: ["Desarrollo Web", "Automatización"],
+    result: "Web + Sistemas",
+    url: "https://belairsedie.it",
+    gradient: "from-[oklch(0.32_0.06_200)] to-[oklch(0.44_0.08_200)]",
+  },
+  {
+    id: 9,
+    name: "Vigar",
+    logo: "/logos/vigar.svg",
+    categories: ["Desarrollo Web"],
+    result: "Web corporativa",
+    url: "https://vigar.com",
+    gradient: "from-[oklch(0.35_0.09_83)] to-[oklch(0.48_0.11_83)]",
+  },
+  {
+    id: 10,
+    name: "Alicia Bravo",
+    logo: "/logos/aliciabravo.png",
+    categories: ["Desarrollo Web"],
+    result: "Web desde cero",
+    url: "https://aliciabravo.es",
+    gradient: "from-[oklch(0.30_0.08_300)] to-[oklch(0.44_0.10_300)]",
   },
 ];
 
 const FILTER_MAP = {
   filterAll: null,
   filterSEO: "SEO",
-  filterDesign: "Diseño Web",
   filterSEM: "SEM",
-  filterSocial: "Redes Sociales",
+  filterWeb: "Desarrollo Web",
+  filterAuto: "Automatización",
 } as const;
 
 const FILTER_KEYS = [
   "filterAll",
   "filterSEO",
-  "filterDesign",
   "filterSEM",
-  "filterSocial",
+  "filterWeb",
+  "filterAuto",
 ] as const;
 
 type FilterKey = (typeof FILTER_KEYS)[number];
@@ -258,18 +301,29 @@ export function Portfolio() {
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     transition={springTransition}
-                    className="relative z-10 text-4xl font-bold text-primary drop-shadow-lg"
+                    className="relative z-10"
                   >
-                    {project.initials}
+                    <Image
+                      src={project.logo}
+                      alt={project.name}
+                      width={120}
+                      height={60}
+                      className="h-12 w-auto object-contain brightness-0 invert drop-shadow-lg"
+                    />
                   </motion.div>
                   <div className="absolute inset-0 bg-[oklch(0_0_0/0.1)] transition-colors duration-300 group-hover:bg-[oklch(0_0_0/0.05)]" />
                 </div>
 
                 {/* Content */}
                 <div className="p-6">
-                  <h3 className="mb-2 text-xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mb-2 block text-xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary"
+                  >
                     {project.name}
-                  </h3>
+                  </a>
 
                   <div className="mb-4 text-2xl font-bold text-gradient-gold">
                     {project.result}

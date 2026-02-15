@@ -67,15 +67,15 @@
   "about": {
     "badge": "Expediente Clasificado",
     "title": "+8 años en servicio activo",
-    "bio1": "Soy José Gilarte, estratega de marketing digital y desarrollo web con más de 8 años de experiencia en el campo de batalla digital, ayudando a empresas a conquistar nuevos territorios.",
-    "bio2": "Mi enfoque combina inteligencia basada en datos con ejecución táctica y una obsesión por los resultados medibles. Cada misión que asumo tiene un objetivo claro: generar impacto real.",
-    "bio3": "Desde reconocimientos SEO técnicos hasta el diseño de operaciones de marketing integrales, me encargo de que cada acción tenga un propósito estratégico y un retorno verificable.",
+    "bio1": "Soy José Gilarte, Ingeniero Informático y Máster en Dirección de Proyectos TI. Más de 8 años en el campo de batalla digital ayudando a empresas a conquistar nuevos territorios con SEO, automatización e IA.",
+    "bio2": "Profesor en Data SEO Academy, ENAE Business School y Nómadas. Enseño Python aplicado a SEO, automatizaciones con n8n, Make, Claude Code y Flowise. Mi enfoque combina inteligencia basada en datos con ejecución táctica.",
+    "bio3": "Liderazgo, empatía y cohesión de equipo son los pilares de cada operación. Desde auditorías SEO técnicas hasta ecosistemas de automatización completos, cada acción tiene un propósito estratégico y un retorno verificable.",
     "credentialsTitle": "Condecoraciones",
     "credentials": {
-      "google": "Certificación Google (Rango Superior)",
-      "wordpress": "Alianza oficial WordPress",
+      "google": "Ing. Informática + Máster Dirección TI",
+      "wordpress": "Profesor en ENAE y Data SEO Academy",
       "projects": "+150 misiones completadas",
-      "trainer": "Instructor de combate digital"
+      "trainer": "+60K€/día gestionados en Google Ads"
     },
     "ctaCV": "Ver perfil en LinkedIn"
   },
@@ -85,9 +85,9 @@
     "subtitle": "Resultados reales en el campo de batalla digital. Cada misión cuenta una historia de conquista.",
     "filterAll": "Todas",
     "filterSEO": "SEO",
-    "filterDesign": "Diseño Web",
     "filterSEM": "SEM",
-    "filterSocial": "Redes Sociales",
+    "filterWeb": "Desarrollo Web",
+    "filterAuto": "Automatización",
     "viewCase": "Ver informe"
   },
   "ctaBanner": {

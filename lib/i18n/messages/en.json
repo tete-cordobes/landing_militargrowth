@@ -67,15 +67,15 @@
   "about": {
     "badge": "Classified File",
     "title": "+8 years in active service",
-    "bio1": "I'm José Gilarte, a digital marketing strategist and web developer with over 8 years of experience on the digital battlefield, helping businesses conquer new territories.",
-    "bio2": "My approach combines data-driven intelligence with tactical execution and an obsession for measurable results. Every mission I take on has a clear objective: generate real impact.",
-    "bio3": "From technical SEO reconnaissance to designing comprehensive marketing operations, I ensure every action has a strategic purpose and a verifiable return.",
+    "bio1": "I'm José Gilarte, Computer Engineer with a Master's in IT Project Management. Over 8 years on the digital battlefield helping businesses conquer new territories with SEO, automation and AI.",
+    "bio2": "Professor at Data SEO Academy, ENAE Business School and Nómadas. I teach Python for SEO, automation with n8n, Make, Claude Code and Flowise. My approach combines data-driven intelligence with tactical execution.",
+    "bio3": "Leadership, empathy and team cohesion are the pillars of every operation. From technical SEO audits to complete automation ecosystems, every action has a strategic purpose and a verifiable return.",
     "credentialsTitle": "Decorations",
     "credentials": {
-      "google": "Google Certification (Superior Rank)",
-      "wordpress": "Official WordPress Alliance",
+      "google": "Computer Engineering + IT Management Master",
+      "wordpress": "Professor at ENAE & Data SEO Academy",
       "projects": "+150 missions completed",
-      "trainer": "Digital combat instructor"
+      "trainer": "+60K€/day managed in Google Ads"
     },
     "ctaCV": "View LinkedIn profile"
   },
@@ -85,9 +85,9 @@
     "subtitle": "Real results on the digital battlefield. Every mission tells a story of conquest.",
     "filterAll": "All",
     "filterSEO": "SEO",
-    "filterDesign": "Web Design",
     "filterSEM": "SEM",
-    "filterSocial": "Social Media",
+    "filterWeb": "Web Dev",
+    "filterAuto": "Automation",
     "viewCase": "View report"
   },
   "ctaBanner": {
