@@ -135,7 +135,7 @@ export function Footer() {
                         href={`/${locale}/${cat.slug}-${city.slug}`}
                         className="text-xs text-muted-foreground transition-colors hover:text-primary"
                       >
-                        {city.name}
+                        {cat.name} {city.name}
                       </a>
                     </li>
                   ))}
