@@ -14,7 +14,7 @@ import { getServiceContent, getSectionLabels } from "@/lib/geo/content";
 import { generateGeoSchema } from "@/lib/geo/seo";
 import { LeadForm } from "@/components/geo/lead-form";
 
-export const dynamicParams = true;
+export const dynamic = "force-static";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -23,15 +23,18 @@ type Props = { params: Promise<{ locale: string; slug: string }> };
 /* -------------------------------------------------------------------------- */
 
 export function generateStaticParams() {
-  const seen = new Set<string>();
-  return geoUrls
-    .filter((u) => {
-      const slug = u.urlEs.slice(1);
-      if (seen.has(slug)) return false;
-      seen.add(slug);
-      return true;
-    })
-    .map((u) => ({ slug: u.urlEs.slice(1) }));
+  const slugs = new Set<string>();
+  const params: { locale: string; slug: string }[] = [];
+
+  for (const u of geoUrls) {
+    const slug = u.urlEs.slice(1);
+    if (slugs.has(slug)) continue;
+    slugs.add(slug);
+    params.push({ locale: "es", slug });
+    params.push({ locale: "en", slug });
+  }
+
+  return params;
 }
 
 /* -------------------------------------------------------------------------- */
