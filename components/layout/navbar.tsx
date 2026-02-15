@@ -82,7 +82,7 @@ export function Navbar() {
           {NAV_LINKS.map((link) => (
             <a
               key={link.key}
-              href={link.href}
+              href={`/${locale}${link.href}`}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               {t(link.key)}
@@ -126,7 +126,7 @@ export function Navbar() {
         <div className="hidden items-center gap-3 md:flex">
           <LanguageSwitcher />
           <a
-            href="#centro-de-mando"
+            href={`/${locale}#centro-de-mando`}
             className="inline-flex h-9 items-center justify-center rounded-md border-gold px-4 text-sm font-medium text-primary transition-all hover:bg-gradient-gold hover:text-primary-foreground"
           >
             {t("cta")}
@@ -150,7 +150,7 @@ export function Navbar() {
             {NAV_LINKS.map((link) => (
               <a
                 key={link.key}
-                href={link.href}
+                href={`/${locale}${link.href}`}
                 className="text-base font-medium text-muted-foreground transition-colors hover:text-primary"
                 onClick={() => setIsMobileOpen(false)}
               >
@@ -180,7 +180,7 @@ export function Navbar() {
             <div className="flex items-center gap-3 pt-2">
               <LanguageSwitcher />
               <a
-                href="#centro-de-mando"
+                href={`/${locale}#centro-de-mando`}
                 className="inline-flex h-9 flex-1 items-center justify-center rounded-md border-gold px-4 text-sm font-medium text-primary transition-all hover:bg-gradient-gold hover:text-primary-foreground"
               >
                 {t("cta")}
