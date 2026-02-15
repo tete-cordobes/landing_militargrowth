@@ -6,7 +6,8 @@ const contactSchema = z.object({
   email: z.email({ error: "Invalid email format" }),
   phone: z.string().optional(),
   service: z.string().optional(),
-  message: z.string().min(20).max(500),
+  message: z.string().max(500).optional(),
+  source: z.string().optional(),
 });
 
 export async function POST(request: Request) {
@@ -14,8 +15,21 @@ export async function POST(request: Request) {
     const body = await request.json();
     const data = contactSchema.parse(body);
 
-    // TODO: Send email with Resend once API key is configured
-    console.log("Contact form submission:", data);
+    const webhook = await fetch(
+      "https://hook.eu1.make.com/mlfubzmrrhtk4dlg8vm72rd43qqhyfo2",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      },
+    );
+
+    if (!webhook.ok) {
+      return NextResponse.json(
+        { error: "Failed to process submission" },
+        { status: 502 },
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {

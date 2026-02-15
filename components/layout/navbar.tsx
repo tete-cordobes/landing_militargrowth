@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 
 const NAV_LINKS = [
@@ -13,12 +13,39 @@ const NAV_LINKS = [
   { href: "#centro-de-mando", key: "contact" },
 ] as const;
 
+const SERVICE_TYPES = {
+  es: [
+    { slug: "agencia-seo-cordoba", label: "Agencia SEO" },
+    { slug: "posicionamiento-web-cordoba", label: "Posicionamiento Web" },
+    { slug: "consultor-seo-cordoba", label: "Consultor SEO" },
+    { slug: "experto-seo-cordoba", label: "Experto SEO" },
+    { slug: "consultoria-ia-cordoba", label: "Consultoría IA" },
+    { slug: "automatizacion-ia-cordoba", label: "Automatización IA" },
+    { slug: "growth-marketing-cordoba", label: "Growth Marketing" },
+    { slug: "posicionamiento-ia-cordoba", label: "Posicionamiento IA" },
+  ],
+  en: [
+    { slug: "agencia-seo-cordoba", label: "SEO Agency" },
+    { slug: "posicionamiento-web-cordoba", label: "Web Positioning" },
+    { slug: "consultor-seo-cordoba", label: "SEO Consultant" },
+    { slug: "experto-seo-cordoba", label: "SEO Expert" },
+    { slug: "consultoria-ia-cordoba", label: "AI Consulting" },
+    { slug: "automatizacion-ia-cordoba", label: "AI Automation" },
+    { slug: "growth-marketing-cordoba", label: "Growth Marketing" },
+    { slug: "posicionamiento-ia-cordoba", label: "AI Search SEO" },
+  ],
+} as const;
+
 export function Navbar() {
   const t = useTranslations("nav");
+  const locale = useLocale();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  const services = SERVICE_TYPES[locale as "es" | "en"] ?? SERVICE_TYPES.es;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +66,7 @@ export function Navbar() {
       } ${isScrolled ? "glass-military-strong border-b border-border/50 shadow-sm" : ""}`}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#" className="transition-opacity hover:opacity-80">
+        <a href={`/${locale}`} className="transition-opacity hover:opacity-80">
           <Image
             src="/logo.svg"
             alt="Jose Gilarte"
@@ -50,6 +77,7 @@ export function Navbar() {
           />
         </a>
 
+        {/* Desktop nav */}
         <div className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
             <a
@@ -60,6 +88,39 @@ export function Navbar() {
               {t(link.key)}
             </a>
           ))}
+
+          {/* Services dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setIsServicesOpen(true)}
+            onMouseLeave={() => setIsServicesOpen(false)}
+          >
+            <button
+              type="button"
+              className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              onClick={() => setIsServicesOpen(!isServicesOpen)}
+            >
+              {locale === "es" ? "Servicios" : "Services"}
+              <ChevronDown className={`size-4 transition-transform ${isServicesOpen ? "rotate-180" : ""}`} />
+            </button>
+
+            {isServicesOpen && (
+              <div className="absolute top-full right-0 pt-2">
+                <div className="w-56 rounded-xl border-military bg-card py-2 shadow-lg">
+                {services.map((svc) => (
+                  <a
+                    key={svc.slug}
+                    href={`/${locale}/${svc.slug}`}
+                    className="block px-4 py-2.5 text-sm text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary"
+                    onClick={() => setIsServicesOpen(false)}
+                  >
+                    {svc.label}
+                  </a>
+                ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="hidden items-center gap-3 md:flex">
@@ -82,6 +143,7 @@ export function Navbar() {
         </button>
       </nav>
 
+      {/* Mobile menu */}
       {isMobileOpen && (
         <div className="border-b border-border bg-card md:hidden">
           <div className="flex flex-col gap-4 px-4 py-6">
@@ -95,6 +157,26 @@ export function Navbar() {
                 {t(link.key)}
               </a>
             ))}
+
+            {/* Mobile services section */}
+            <div className="border-t border-border/30 pt-4">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-primary/60">
+                {locale === "es" ? "Servicios" : "Services"}
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                {services.map((svc) => (
+                  <a
+                    key={svc.slug}
+                    href={`/${locale}/${svc.slug}`}
+                    className="rounded-lg border-military bg-background px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+                    onClick={() => setIsMobileOpen(false)}
+                  >
+                    {svc.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
             <div className="flex items-center gap-3 pt-2">
               <LanguageSwitcher />
               <a

@@ -7,6 +7,8 @@ import { routing } from "@/i18n/routing";
 import { hasLocale } from "next-intl";
 import { BootScreen } from "@/components/ui/boot-screen";
 import { BulletHoles } from "@/components/ui/bullet-holes";
+import { CookieBanner } from "@/components/ui/cookie-banner";
+import { Analytics } from "@vercel/analytics/react";
 import "../globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -29,6 +31,14 @@ export const metadata: Metadata = {
   description:
     "Especialista en SEO, Marketing Digital y Desarrollo Web con +8 años de experiencia. Estrategias basadas en datos que transforman visitantes en clientes.",
   metadataBase: new URL("https://josegilarte.es"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      es: "/es",
+      en: "/en",
+      "x-default": "/es",
+    },
+  },
   openGraph: {
     type: "website",
     locale: "es_ES",
@@ -47,6 +57,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -73,7 +90,9 @@ export default async function LocaleLayout({ children, params }: Props) {
         <BulletHoles />
         <NextIntlClientProvider messages={messages}>
           {children}
+          <CookieBanner />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

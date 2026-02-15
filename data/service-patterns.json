@@ -1,0 +1,93 @@
+[
+  {
+    "pilar": "seo",
+    "slugEs": "agencia-seo",
+    "slugEn": "seo-agency",
+    "kwEs": "agencia seo",
+    "kwEn": "seo agency",
+    "tiers": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "pilar": "seo",
+    "slugEs": "posicionamiento-web",
+    "slugEn": "web-positioning",
+    "kwEs": "posicionamiento web",
+    "kwEn": "web positioning",
+    "tiers": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "pilar": "seo",
+    "slugEs": "consultor-seo",
+    "slugEn": "seo-consultant",
+    "kwEs": "consultor seo",
+    "kwEn": "seo consultant",
+    "tiers": [
+      1,
+      2
+    ]
+  },
+  {
+    "pilar": "seo",
+    "slugEs": "experto-seo",
+    "slugEn": "seo-expert",
+    "kwEs": "experto seo",
+    "kwEn": "seo expert",
+    "tiers": [
+      1,
+      2
+    ]
+  },
+  {
+    "pilar": "ia",
+    "slugEs": "consultoria-ia",
+    "slugEn": "ai-consulting",
+    "kwEs": "consultoria ia",
+    "kwEn": "ai consulting",
+    "tiers": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "pilar": "ia",
+    "slugEs": "automatizacion-ia",
+    "slugEn": "ai-automation",
+    "kwEs": "automatizacion ia",
+    "kwEn": "ai automation",
+    "tiers": [
+      1,
+      2
+    ]
+  },
+  {
+    "pilar": "growth",
+    "slugEs": "growth-marketing",
+    "slugEn": "growth-marketing",
+    "kwEs": "growth marketing",
+    "kwEn": "growth marketing",
+    "tiers": [
+      1
+    ]
+  },
+  {
+    "pilar": "geo",
+    "slugEs": "posicionamiento-ia",
+    "slugEn": "ai-search-optimization",
+    "kwEs": "posicionamiento ia",
+    "kwEn": "ai search optimization",
+    "tiers": [
+      1,
+      2
+    ]
+  }
+]

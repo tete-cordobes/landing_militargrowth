@@ -5,12 +5,10 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import {
   Mail,
-  Phone,
   MapPin,
   Clock,
   Send,
   Loader2,
-  Calendar,
   CheckCircle,
   AlertTriangle,
 } from "lucide-react";
@@ -18,7 +16,6 @@ import Image from "next/image";
 
 const CONTACT_INFO = [
   { icon: Mail, labelKey: "info.emailLabel", valueKey: "info.email", isEmail: true },
-  { icon: Phone, labelKey: "info.phoneLabel", valueKey: "info.phone", isEmail: false },
   { icon: MapPin, labelKey: "info.locationLabel", valueKey: "info.location", isEmail: false },
   { icon: Clock, labelKey: "info.scheduleLabel", valueKey: "info.schedule", isEmail: false },
 ] as const;
@@ -366,32 +363,6 @@ export function ContactForm() {
                   </div>
                 ))}
               </div>
-            </motion.div>
-
-            {/* Calendly Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ ...springTransition, delay: 0.4 }}
-              className="rounded-2xl bg-gradient-gold p-6 text-primary-foreground shadow-xl"
-            >
-              <div className="mb-4 flex items-center gap-3">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-white/20">
-                  <Calendar className="size-6 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-bold">{t("calendly.title")}</h3>
-              </div>
-              <p className="mb-6 leading-relaxed text-primary-foreground/90">
-                {t("calendly.subtitle")}
-              </p>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full rounded-xl bg-card py-3 font-semibold text-primary transition-all duration-200 hover:glow-gold"
-              >
-                {t("calendly.cta")}
-              </motion.button>
             </motion.div>
           </div>
         </div>

@@ -169,18 +169,11 @@
     "infoTitle": "Communications Channel",
     "info": {
       "emailLabel": "Secure channel",
-      "email": "hola@josegilarte.es",
-      "phoneLabel": "Direct frequency",
-      "phone": "+34 XXX XXX XXX",
+      "email": "jose@josegilarte.es",
       "locationLabel": "Operations base",
       "location": "Seville, Spain",
       "scheduleLabel": "Operative hours",
       "schedule": "Mon - Fri: 09:00 - 18:00"
-    },
-    "calendly": {
-      "title": "Request a direct briefing?",
-      "subtitle": "Book a 30-minute tactical video call to plan your operation.",
-      "cta": "Request briefing"
     }
   },
   "footer": {

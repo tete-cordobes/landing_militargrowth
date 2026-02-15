@@ -127,23 +127,6 @@
 
 }
 
-/* Custom military crosshair cursor - desktop only (unlayered to override Tailwind) */
-@media (pointer: fine) {
-  body {
-    cursor: url('/cursor-crosshair.svg') 16 16, crosshair;
-  }
-
-  a,
-  button,
-  [role="button"],
-  input,
-  select,
-  textarea,
-  label[for],
-  [tabindex]:not([tabindex="-1"]) {
-    cursor: url('/cursor-pointer.svg') 16 16, pointer;
-  }
-}
 
 @layer utilities {
   /* === GRADIENT TEXT === */
@@ -339,5 +322,26 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* ============================================================
+   CUSTOM CURSOR - Must be LAST in the file to override Tailwind
+   ============================================================ */
+@media (pointer: fine) {
+  html,
+  html * {
+    cursor: url('/cursor-crosshair.svg') 16 16, crosshair !important;
+  }
+
+  a,
+  button,
+  [role="button"],
+  input,
+  select,
+  textarea,
+  label[for],
+  [tabindex]:not([tabindex="-1"]) {
+    cursor: url('/cursor-pointer.svg') 16 16, pointer !important;
   }
 }

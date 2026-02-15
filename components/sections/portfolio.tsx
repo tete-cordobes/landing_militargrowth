@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { MilitaryStarIcon, FighterJetIcon } from "@/components/ui/military-icons";
+import Image from "next/image";
 
 type Project = {
   id: number;
@@ -96,12 +97,37 @@ export function Portfolio() {
     : [...PROJECTS];
 
   return (
-    <section id="misiones" className="relative overflow-hidden bg-gradient-military-section px-4 py-24">
-      {/* Noise texture overlay */}
-      <div className="noise-texture pointer-events-none absolute inset-0 opacity-30" />
+    <section id="misiones" className="relative overflow-hidden py-24">
+      {/* Cork board background */}
+      <Image
+        src="/portfolio-bg.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover object-center"
+        quality={85}
+      />
 
-      {/* Grid pattern overlay */}
-      <div className="grid-pattern pointer-events-none absolute inset-0 opacity-[0.04]" />
+      {/* Dark overlay for text readability */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, oklch(0.08 0.02 145 / 88%) 0%, oklch(0.08 0.02 145 / 80%) 50%, oklch(0.08 0.02 145 / 90%) 100%)",
+        }}
+      />
+
+      {/* Vignette */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, transparent 35%, oklch(0.04 0.02 145 / 65%) 100%)",
+        }}
+      />
+
+      {/* Noise texture overlay */}
+      <div className="noise-texture pointer-events-none absolute inset-0 opacity-[0.06]" />
 
       {/* Fighter jet silhouette - top right decoration */}
       <div
@@ -114,7 +140,7 @@ export function Portfolio() {
         <FighterJetIcon className="h-auto w-[400px] text-primary lg:w-[550px]" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

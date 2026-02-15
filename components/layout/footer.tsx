@@ -1,12 +1,10 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
-import { Linkedin, Instagram, Twitter, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 
 const SOCIAL_LINKS = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Mail, href: "mailto:hola@josegilarte.es", label: "Email" },
+  { icon: Linkedin, href: "https://es.linkedin.com/in/jose-gilarte-alvarez", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:jose@josegilarte.es", label: "Email" },
 ] as const;
 
 const NAV_LINKS = [
@@ -19,6 +17,7 @@ const NAV_LINKS = [
 export function Footer() {
   const t = useTranslations("footer");
   const tNav = useTranslations("nav");
+  const locale = useLocale();
 
   return (
     <footer className="border-t border-border bg-background">
@@ -90,19 +89,19 @@ export function Footer() {
           </p>
           <div className="flex gap-4">
             <a
-              href="#"
+              href={`/${locale}/privacidad`}
               className="text-xs text-muted-foreground transition-colors hover:text-primary"
             >
               {t("privacy")}
             </a>
             <a
-              href="#"
+              href={`/${locale}/aviso-legal`}
               className="text-xs text-muted-foreground transition-colors hover:text-primary"
             >
               {t("legal")}
             </a>
             <a
-              href="#"
+              href={`/${locale}/cookies`}
               className="text-xs text-muted-foreground transition-colors hover:text-primary"
             >
               {t("cookies")}

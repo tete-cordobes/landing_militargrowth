@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, type ElementRef } from "react";
 import { Quote } from "lucide-react";
 import { MilitaryStarIcon } from "@/components/ui/military-icons";
+import Image from "next/image";
 
 const TESTIMONIAL_KEYS = ["t1", "t2", "t3"] as const;
 
@@ -41,21 +42,45 @@ export function Testimonials() {
     <section
       id="reportes-de-campo"
       ref={sectionRef}
-      className="relative overflow-hidden bg-gradient-military-section-alt py-24 px-4"
+      className="relative overflow-hidden py-24"
     >
+      {/* Military base background */}
+      <Image
+        src="/testimonials-bg.jpg"
+        alt=""
+        fill
+        sizes="100vw"
+        className="object-cover object-center"
+        quality={85}
+      />
+
+      {/* Dark overlay for text readability */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, oklch(0.08 0.02 145 / 90%) 0%, oklch(0.08 0.02 145 / 82%) 50%, oklch(0.08 0.02 145 / 92%) 100%)",
+        }}
+      />
+
+      {/* Vignette */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, transparent 35%, oklch(0.04 0.02 145 / 65%) 100%)",
+        }}
+      />
+
       {/* Noise texture overlay */}
       <div
         aria-hidden="true"
-        className="noise-texture pointer-events-none absolute inset-0 opacity-30"
+        className="noise-texture pointer-events-none absolute inset-0 opacity-[0.06]"
       />
 
-      {/* Grid pattern overlay */}
-      <div
-        aria-hidden="true"
-        className="grid-pattern pointer-events-none absolute inset-0 opacity-[0.03]"
-      />
-
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
