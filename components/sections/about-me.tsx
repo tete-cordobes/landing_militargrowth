@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion, useInView } from "framer-motion";
 import { useRef, type ElementRef } from "react";
 import Image from "next/image";
-import { Download } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { MedalIcon, HelicopterIcon } from "@/components/ui/military-icons";
 
 const CREDENTIAL_KEYS = ["google", "wordpress", "projects", "trainer"] as const;
@@ -220,14 +220,15 @@ export function AboutMe() {
             {/* CTA Button */}
             <motion.div variants={itemVariants}>
               <motion.a
-                href="/cv-jose-gilarte.pdf"
-                download
+                href="https://es.linkedin.com/in/jose-gilarte-alvarez"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={springTransition}
                 className="inline-flex items-center gap-3 rounded-xl bg-gradient-gold px-8 py-4 font-semibold text-primary-foreground shadow-lg transition-all duration-300 hover:glow-gold"
               >
-                <Download className="size-5" />
+                <Linkedin className="size-5" />
                 <span>{t("ctaCV")}</span>
               </motion.a>
             </motion.div>
