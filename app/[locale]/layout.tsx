@@ -9,6 +9,7 @@ import { BootScreen } from "@/components/ui/boot-screen";
 import { BulletHoles } from "@/components/ui/bullet-holes";
 import { CookieBanner } from "@/components/ui/cookie-banner";
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "../globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -93,6 +94,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <CookieBanner />
         </NextIntlClientProvider>
         <Analytics />
+        <GoogleAnalytics gaId="G-47ZVKMPM4B" />
       </body>
     </html>
   );
