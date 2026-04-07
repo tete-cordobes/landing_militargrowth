@@ -15,14 +15,16 @@ const NAV_LINKS = [
 ] as const;
 
 const TOP_CITIES = [
-  { name: "Madrid", slug: "madrid" },
+  { name: "Córdoba", slug: "cordoba" },
   { name: "Barcelona", slug: "barcelona" },
-  { name: "Valencia", slug: "valencia" },
-  { name: "Sevilla", slug: "sevilla" },
-  { name: "Zaragoza", slug: "zaragoza" },
-  { name: "Málaga", slug: "malaga" },
-  { name: "Murcia", slug: "murcia" },
-  { name: "Bilbao", slug: "bilbao" },
+  { name: "San Sebastián", slug: "san-sebastian" },
+  { name: "Gijón", slug: "gijon" },
+  { name: "Cáceres", slug: "caceres" },
+  { name: "Jerez de la Frontera", slug: "jerez-de-la-frontera" },
+  { name: "Aranjuez", slug: "aranjuez" },
+  { name: "Toledo", slug: "toledo" },
+  { name: "Torremolinos", slug: "torremolinos" },
+  { name: "Chiclana", slug: "chiclana-de-la-frontera" },
 ] as const;
 
 const SERVICE_CATEGORIES = {
