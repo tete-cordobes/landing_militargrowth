@@ -60,7 +60,7 @@ Soy Jose Gilarte, consultor de posicionamiento web en Córdoba con más de 8 añ
   faqs: [
     [
       "¿Cuánto cuesta el posicionamiento web en Córdoba?",
-      "Los planes de SEO local para negocios en Córdoba parten desde 299€/mes. Este precio incluye auditoría técnica, optimización on-page, estrategia de contenidos y reporting mensual. Para sectores más competitivos como clínicas, inmobiliarias o abogados, los planes avanzados arrancan desde 499€/mes. Lo importante: no hay permanencias. Si no ves valor, puedes cancelar cuando quieras.",
+      "Los planes de posicionamiento web en Córdoba parten desde 950€/mes. Este precio incluye auditoría técnica completa, optimización on-page, estrategia de contenidos, link building de calidad y reporting mensual con métricas reales. No es el servicio más barato del mercado, y es intencional: el SEO barato sale caro. Trabajas directamente conmigo, con certificaciones GDE y MVP, no con un becario. Lo importante: no hay permanencias. Si no ves valor, puedes cancelar cuando quieras.",
     ],
     [
       "¿Cuánto tarda en funcionar el SEO en Córdoba?",
