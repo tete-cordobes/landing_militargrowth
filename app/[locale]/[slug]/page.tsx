@@ -221,59 +221,28 @@ export default async function GeoLandingPage({ params }: Props) {
           <div className="noise-texture absolute inset-0 opacity-[0.04] pointer-events-none" />
 
           <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            {/* Breadcrumbs */}
+            {/* Breadcrumbs — visual only, structured data in JSON-LD */}
             <nav aria-label="Breadcrumb" className="mb-8">
-              <ol
-                className="flex items-center gap-2 text-sm text-muted-foreground"
-                itemScope
-                itemType="https://schema.org/BreadcrumbList"
-              >
-                <li
-                  itemProp="itemListElement"
-                  itemScope
-                  itemType="https://schema.org/ListItem"
-                >
+              <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+                <li>
                   <a
                     href={`/${locale}`}
                     className="hover:text-primary transition-colors"
-                    itemProp="item"
                   >
-                    <span itemProp="name">{labels.breadcrumbHome}</span>
+                    {labels.breadcrumbHome}
                   </a>
-                  <meta itemProp="position" content="1" />
                 </li>
                 <li className="text-muted-foreground/50">/</li>
-                <li
-                  itemProp="itemListElement"
-                  itemScope
-                  itemType="https://schema.org/ListItem"
-                >
-                  <span itemProp="name" className="text-muted-foreground">
-                    {city.ccaa}
-                  </span>
-                  <meta itemProp="position" content="2" />
+                <li>
+                  <span className="text-muted-foreground">{city.ccaa}</span>
                 </li>
                 <li className="text-muted-foreground/50">/</li>
-                <li
-                  itemProp="itemListElement"
-                  itemScope
-                  itemType="https://schema.org/ListItem"
-                >
-                  <span itemProp="name" className="text-muted-foreground">
-                    {city.provincia}
-                  </span>
-                  <meta itemProp="position" content="3" />
+                <li>
+                  <span className="text-muted-foreground">{city.provincia}</span>
                 </li>
                 <li className="text-muted-foreground/50">/</li>
-                <li
-                  itemProp="itemListElement"
-                  itemScope
-                  itemType="https://schema.org/ListItem"
-                >
-                  <span itemProp="name" className="text-primary font-medium">
-                    {resolvedH1}
-                  </span>
-                  <meta itemProp="position" content="4" />
+                <li>
+                  <span className="text-primary font-medium">{resolvedH1}</span>
                 </li>
               </ol>
             </nav>
