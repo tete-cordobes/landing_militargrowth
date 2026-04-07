@@ -26,11 +26,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Jose Gilarte | Especialista SEO & Marketing Digital",
+    default: "Jose Gilarte · Consultor SEO en Córdoba · GDE & MVP",
     template: "%s | Jose Gilarte",
   },
   description:
-    "Especialista en SEO, Marketing Digital y Desarrollo Web con +8 años de experiencia. Estrategias basadas en datos que transforman visitantes en clientes.",
+    "Consultor SEO en Córdoba con 8+ años de experiencia. Google Developer Expert y Microsoft MVP. Posicionamiento web, SEO local e IA para empresas. Auditoría gratis.",
   metadataBase: new URL("https://josegilarte.es"),
   alternates: {
     canonical: "/es",
@@ -39,15 +39,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     siteName: "Jose Gilarte",
-    title: "Jose Gilarte | Especialista SEO & Marketing Digital",
+    title: "Jose Gilarte · Consultor SEO en Córdoba · GDE & MVP",
     description:
-      "Estrategias de marketing digital basadas en datos que transforman visitantes en clientes.",
+      "Consultor SEO en Córdoba con 8+ años de experiencia. Posicionamiento web, SEO local e IA para empresas.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jose Gilarte | Especialista SEO & Marketing Digital",
+    title: "Jose Gilarte · Consultor SEO en Córdoba · GDE & MVP",
     description:
-      "Estrategias de marketing digital basadas en datos que transforman visitantes en clientes.",
+      "Consultor SEO en Córdoba con 8+ años de experiencia. Posicionamiento web, SEO local e IA para empresas.",
   },
   robots: {
     index: true,

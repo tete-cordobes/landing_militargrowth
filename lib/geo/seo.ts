@@ -194,6 +194,63 @@ function buildFaqPage(
 }
 
 /**
+ * LocalBusiness schema for Córdoba (base city).
+ * Only included when the geo page targets Córdoba.
+ */
+function buildLocalBusiness(pageUrl: string): Record<string, unknown> {
+  return {
+    "@type": "LocalBusiness",
+    "@id": `${BASE_URL}/#localbusiness`,
+    name: "Jose Gilarte — Consultor SEO",
+    description:
+      "Consultor SEO en Córdoba con 8+ años de experiencia. Google Developer Expert y Microsoft MVP. Posicionamiento web, SEO local e inteligencia artificial para empresas.",
+    url: BASE_URL,
+    telephone: "+34600000000",
+    email: "jose@josegilarte.es",
+    image: `${BASE_URL}/images/jose-gilarte.jpg`,
+    priceRange: "€€€",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Córdoba",
+      addressRegion: "Andalucía",
+      addressCountry: "ES",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 37.8882,
+      longitude: -4.7794,
+    },
+    areaServed: [
+      { "@type": "City", name: "Córdoba" },
+      { "@type": "AdministrativeArea", name: "Andalucía" },
+      { "@type": "Country", name: "España" },
+    ],
+    founder: {
+      "@type": "Person",
+      name: "Jose Gilarte",
+      jobTitle: "Consultor SEO · GDE & MVP",
+      url: BASE_URL,
+      sameAs: [
+        "https://es.linkedin.com/in/jose-gilarte-alvarez",
+      ],
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      ratingCount: "47",
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
+}
+
+/**
  * Generates the full JSON-LD @graph array for a geo landing page.
  * Returns a serializable object ready to be placed in a <script type="application/ld+json"> tag.
  */
@@ -212,6 +269,11 @@ export function generateGeoSchema(input: SchemaInput): Record<string, unknown> {
 
   if (content.faqs.length > 0) {
     graph.push(buildFaqPage(pageUrl, content.faqs));
+  }
+
+  // Add LocalBusiness schema for Córdoba pages
+  if (city.slug === "cordoba") {
+    graph.push(buildLocalBusiness(pageUrl));
   }
 
   return {

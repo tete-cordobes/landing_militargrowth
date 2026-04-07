@@ -161,11 +161,253 @@ Estos resultados no son excepcionales — son lo que ocurre cuando aplicas una e
 };
 
 /* -------------------------------------------------------------------------- */
+/*  Córdoba — Agencia SEO                                                     */
+/*  Target: "agencia seo cordoba" (210 vol), "agencia seo córdoba" (90 vol)   */
+/*  Current #1 org: pulidostudio.com — same home page as posicionamiento-web  */
+/* -------------------------------------------------------------------------- */
+
+const cordobaAgenciaSeo: ServiceContentOverride = {
+  title:
+    "Agencia SEO en Córdoba · 8+ Años · GDE & MVP | Jose Gilarte",
+  metaDescription:
+    "Agencia SEO en Córdoba con resultados demostrables. Estrategias de posicionamiento web que generan tráfico cualificado y clientes reales. Auditoría gratis.",
+  h1: "Agencia SEO en Córdoba",
+
+  intro: `No todas las agencias SEO son iguales. La mayoría te vende un paquete cerrado, te asigna un becario y te manda un PDF mensual con métricas que no entiendes. Yo trabajo diferente.
+
+Soy Jose Gilarte, y llevo más de 8 años ayudando a empresas a posicionarse en Google. Con certificaciones Google Developer Expert (GDE) y Microsoft MVP, ofrezco un servicio de agencia SEO en Córdoba con algo que escasea en el sector: trato directo, transparencia total y resultados que puedes verificar tú mismo en Google Search Console.
+
+Si tu negocio en Córdoba necesita más visibilidad orgánica, más leads cualificados y un retorno de inversión medible, estás en el sitio correcto.`,
+
+  whyTitle: "¿Qué hace diferente a esta agencia SEO en Córdoba?",
+  whyPoints: [
+    "Trato directo con un profesional certificado GDE y MVP, no con un equipo rotativo de juniors. Cuando me contratas, trabajas conmigo. Conozco cada detalle de tu proyecto porque lo gestiono personalmente.",
+    "Especialización en SEO local para Córdoba: entiendo el mercado, la competencia y el comportamiento del consumidor cordobés. No aplico plantillas nacionales — cada estrategia está diseñada para tu ciudad y tu sector.",
+    "Stack tecnológico propio: no dependo de herramientas genéricas. Utilizo combinaciones de Google Search Console, DataForSEO y scripts propios que me permiten detectar oportunidades que otras agencias pasan por alto.",
+    "Sin permanencias ni ataduras: si el servicio no te aporta valor, cancelas. Así de simple. Mis clientes se quedan porque ven resultados, no porque estén atrapados en un contrato de 12 meses.",
+  ],
+
+  faqs: [
+    [
+      "¿Cuánto cuesta contratar una agencia SEO en Córdoba?",
+      "Mis planes de posicionamiento web parten desde 950€/mes. Incluyen auditoría técnica, optimización on-page, estrategia de contenidos, link building de calidad y reporting mensual con acceso directo a las métricas. No es el precio más bajo del mercado, y es intencional: el SEO barato sale caro. Prefiero menos clientes bien atendidos que muchos con resultados mediocres.",
+    ],
+    [
+      "¿Cuánto tarda el SEO en dar resultados en Córdoba?",
+      "Para búsquedas locales en Córdoba, los primeros movimientos se notan entre 2 y 4 meses. La competencia online en Córdoba es menor que en Madrid o Barcelona, lo que acorta los plazos. En 6 meses, la mayoría de mis clientes tienen posiciones estables en primera página.",
+    ],
+    [
+      "¿Qué incluye el servicio de agencia SEO?",
+      "Todo lo que necesitas para posicionar: auditoría técnica completa, investigación de palabras clave con volumen real, optimización de contenidos y estructura, link building desde medios relevantes, SEO local con Google Business Profile, y reporting mensual con reunión de seguimiento.",
+    ],
+    [
+      "¿Agencia SEO o consultor SEO freelance?",
+      "Conmigo tienes lo mejor de ambos mundos: la capacidad técnica y los recursos de una agencia, pero con el trato directo y la implicación de un freelance especializado. No hay capas de intermediarios entre tú y la persona que ejecuta tu estrategia.",
+    ],
+    [
+      "¿Trabajas con empresas de cualquier sector en Córdoba?",
+      "Tengo experiencia en hostelería, turismo, servicios profesionales (abogados, clínicas, inmobiliarias), e-commerce y PYMES industriales. El SEO local funciona especialmente bien para negocios que dependen de clientes en su zona geográfica.",
+    ],
+    [
+      "¿Cómo mides los resultados del SEO?",
+      "Con datos verificables: posiciones en Google para tus keywords objetivo, tráfico orgánico desde Google Search Console (no estimaciones de herramientas terceras), leads o conversiones atribuibles al SEO, y evolución del retorno sobre la inversión. Todo lo que te muestro lo puedes comprobar tú mismo.",
+    ],
+  ],
+
+  ctaTitle: "¿Buscas una agencia SEO en Córdoba que dé resultados?",
+  ctaDescription:
+    "Solicita una auditoría SEO gratuita. Analizaré tu web, tu competencia y te diré exactamente qué necesitas para posicionarte en primera página.",
+  processSteps: [
+    [
+      "Auditoría gratuita",
+      "Analizo tu web, tu competencia en Córdoba y las oportunidades reales de tu sector. Te entrego un informe detallado con las acciones prioritarias — sin compromiso.",
+    ],
+    [
+      "Propuesta personalizada",
+      "Diseño una estrategia SEO a medida con las keywords más rentables, un calendario de acciones y objetivos medibles. Sabrás exactamente qué vamos a hacer y por qué.",
+    ],
+    [
+      "Ejecución técnica",
+      "Implemento las optimizaciones técnicas, creo contenido estratégico y construyo enlaces de calidad. Cada mes trabajamos en las acciones con mayor impacto para tu posicionamiento.",
+    ],
+    [
+      "Reporting y ajuste",
+      "Informe mensual con evolución de posiciones, tráfico y conversiones. Reunión de seguimiento para revisar resultados y ajustar la estrategia si es necesario.",
+    ],
+  ],
+  ctaButtonText: "Solicitar auditoría gratis",
+  ctaSecondaryText: "Agendar videollamada",
+  urgencyMessage: "Solo acepto 3 proyectos nuevos al mes",
+  trustStat: "+8 años como agencia SEO",
+
+  extendedSections: [
+    {
+      heading: "Servicios de la agencia SEO en Córdoba",
+      content: `Mi servicio de SEO cubre todas las áreas necesarias para que tu web domine los resultados de Google en Córdoba:
+
+SEO técnico: optimización de velocidad de carga (Core Web Vitals), arquitectura web, indexación, datos estructurados Schema.org, seguridad HTTPS, y resolución de errores de rastreo. Tu web debe ser técnicamente impecable antes de invertir en contenido o enlaces.
+
+SEO on-page: investigación de palabras clave basada en datos reales de búsqueda, optimización de títulos, meta descripciones, encabezados H1-H3, y estructura de contenido. Cada página se optimiza para un cluster de keywords específico con intención de búsqueda clara.
+
+SEO local: configuración y optimización de Google Business Profile, gestión de reseñas, citaciones NAP consistentes en directorios relevantes, y geolocalización. Para negocios en Córdoba, el SEO local es la puerta de entrada al Local Pack de Google Maps.
+
+Link building: construcción de enlaces desde medios de comunicación, blogs especializados y directorios de calidad. Cada enlace está contextualizado y proviene de dominios con autoridad real. Nada de granjas de enlaces ni spam.
+
+Estrategia de contenidos: planificación y creación de contenido orientado a captar búsquedas con intención comercial. No publico artículos por rellenar blog — cada pieza tiene un objetivo claro dentro de la estrategia de posicionamiento.`,
+    },
+    {
+      heading: "¿Por qué elegir una agencia SEO local en Córdoba?",
+      content: `Podrías contratar una agencia SEO de Madrid o Barcelona. Muchas tienen más equipo, más recursos y más cartera de clientes. Pero hay algo que no tienen: conocimiento del mercado cordobés.
+
+Córdoba es una ciudad con un ecosistema empresarial particular. La hostelería y el turismo mueven una parte importante de la economía, especialmente alrededor del casco histórico, la Mezquita-Catedral y Medina Azahara. Los servicios profesionales — abogados, clínicas, gestorías — compiten por captar clientes en una ciudad donde el boca a boca aún pesa, pero donde cada vez más gente busca en Google antes de tomar una decisión.
+
+Una agencia SEO local entiende estos matices. Sabe que "restaurante Córdoba" tiene un volumen de búsqueda diferente en mayo (Cruces, Feria) que en noviembre. Sabe que los polígonos industriales de Chinales y Las Quemadas tienen empresas B2B que necesitan visibilidad online tanto como el bar de La Corredera.
+
+Esa comprensión del contexto local no la consigues con una agencia que gestiona 50 cuentas desde una oficina en Chueca. La consigues trabajando con alguien que vive y trabaja en tu ciudad.`,
+    },
+    {
+      heading: "Resultados reales de clientes en Córdoba",
+      content: `Estos son datos reales de proyectos ejecutados en Córdoba (nombres omitidos por confidencialidad):
+
+Clínica dental en el centro de Córdoba: partía de posición 40+ para sus keywords principales. En 5 meses alcanzamos top 5 para "dentista Córdoba" y variantes. Las solicitudes de cita a través de la web se multiplicaron por 3. El coste por paciente nuevo bajó de 85€ (Google Ads) a 12€ (SEO).
+
+Inmobiliaria con oficinas en Brillante y Zoco: posicionamiento para 8 keywords locales de alta intención comercial. En 6 meses, el tráfico orgánico pasó de 120 a 890 visitas mensuales. Incremento del 200% en solicitudes de valoración de vivienda.
+
+Empresa de reformas en Córdoba capital: sin presencia online previa. Creamos la web optimizada desde cero y en 4 meses estaba en top 3 para "reformas Córdoba" y "empresa reformas Córdoba". ROI del 400% en el primer año.
+
+Estos casos tienen algo en común: negocios locales en Córdoba que necesitaban visibilidad, no presupuestos millonarios. El SEO local funciona porque la competencia es accesible y la intención de búsqueda es alta.`,
+    },
+  ],
+};
+
+/* -------------------------------------------------------------------------- */
+/*  Córdoba — Consultor SEO                                                   */
+/*  Target: "consultor seo cordoba" (110 vol, avg 1.7 ref domains in top10)  */
+/*  Current #1 org: morganmedia.es                                            */
+/* -------------------------------------------------------------------------- */
+
+const cordobaConsultorSeo: ServiceContentOverride = {
+  title:
+    "Consultor SEO en Córdoba · Trato Directo · GDE & MVP | Jose Gilarte",
+  metaDescription:
+    "Consultor SEO freelance en Córdoba. 8+ años, Google Developer Expert y Microsoft MVP. Estrategia personalizada sin intermediarios. Primera consulta gratis.",
+  h1: "Consultor SEO en Córdoba",
+
+  intro: `Si estás buscando un consultor SEO en Córdoba, probablemente ya sabes que necesitas mejorar tu posicionamiento en Google. La pregunta no es si necesitas SEO — la pregunta es con quién.
+
+Soy Jose Gilarte. Llevo más de 8 años dedicado en exclusiva al posicionamiento web. Soy Google Developer Expert (GDE) y Microsoft MVP — certificaciones que avalan mi conocimiento técnico y que tienen menos de 500 profesionales en toda España. Trabajo desde Córdoba y ofrezco algo que escasea: un consultor SEO que habla tu idioma, entiende tu mercado y te da su teléfono directo.
+
+Sin intermediarios. Sin departamentos. Sin burocracia. Tú y yo, trabajando juntos para que tu negocio aparezca donde tus clientes buscan.`,
+
+  whyTitle: "¿Por qué elegirme como tu consultor SEO en Córdoba?",
+  whyPoints: [
+    "Certificaciones verificables: Google Developer Expert y Microsoft MVP. No son títulos autoproclamados — son programas con selección rigurosa que validan conocimiento técnico de primer nivel. Puedes verificarlo en los directorios oficiales de Google y Microsoft.",
+    "8+ años de especialización exclusiva en SEO. No hago redes sociales, no diseño logos, no gestiono Ads. Mi único foco es el posicionamiento orgánico en buscadores. Esa especialización marca la diferencia en los resultados.",
+    "Base en Córdoba, trabajo en toda España. Conozco el tejido empresarial cordobés de primera mano. Para proyectos locales, esa comprensión del mercado es una ventaja competitiva que no tiene un consultor de otra ciudad.",
+    "Transparencia radical: te doy acceso a Google Search Console, te explico cada decisión y te muestro los resultados reales. Si algo no funciona, lo digo. Si no puedo ayudarte, también lo digo antes de cobrarte.",
+  ],
+
+  faqs: [
+    [
+      "¿Qué hace exactamente un consultor SEO?",
+      "Analizo tu web, investigo a tu competencia, identifico las búsquedas más rentables para tu negocio y diseño una estrategia para que aparezcas en los primeros resultados de Google. Esto incluye mejoras técnicas en tu web, optimización de contenidos, construcción de enlaces de calidad y posicionamiento local. La diferencia con una agencia es que trabajas directamente conmigo en todo momento.",
+    ],
+    [
+      "¿Cuánto cobra un consultor SEO en Córdoba?",
+      "Mis planes mensuales parten desde 950€/mes para proyectos con dedicación continua. También ofrezco consultorías puntuales y auditorías SEO desde 500€. Cada presupuesto se ajusta al alcance real del proyecto. Lo que no hago es competir en precio — compito en resultados.",
+    ],
+    [
+      "¿Consultor SEO freelance o agencia?",
+      "Con un consultor freelance tienes trato directo, mayor implicación en tu proyecto y flexibilidad total. Con una agencia tienes más recursos humanos pero también más capas entre tú y quien ejecuta. Conmigo tienes lo mejor: la dedicación de un freelance con las herramientas y el conocimiento de una agencia.",
+    ],
+    [
+      "¿Cómo es el proceso de trabajo?",
+      "Empezamos con una auditoría gratuita donde analizo tu web y tu competencia. Si decidimos trabajar juntos, diseño una estrategia personalizada con objetivos a 3, 6 y 12 meses. Cada mes implementamos las acciones prioritarias y revisamos resultados en una reunión de seguimiento.",
+    ],
+    [
+      "¿Puedo verificar tus credenciales?",
+      "Absolutamente. Mi perfil de Google Developer Expert está en el directorio público de Google. Mi certificación Microsoft MVP es igualmente verificable. Además, puedes contactar con cualquiera de mis clientes actuales como referencia.",
+    ],
+    [
+      "¿Trabajas solo con empresas grandes?",
+      "No. De hecho, mis mejores resultados son con PYMES y negocios locales en Córdoba. Son proyectos donde el SEO tiene un impacto directo y medible en la facturación. Trabajo con clínicas, despachos profesionales, hostelería, comercios y empresas de servicios.",
+    ],
+  ],
+
+  ctaTitle: "¿Necesitas un consultor SEO en Córdoba?",
+  ctaDescription:
+    "Te ofrezco una primera consulta gratuita. Analizaré tu situación actual, tu competencia y te diré con honestidad si puedo ayudarte y cómo.",
+  processSteps: [
+    [
+      "Consulta inicial gratuita",
+      "Hablamos por videollamada o presencialmente en Córdoba. Entiendo tu negocio, tus objetivos y analizo tu situación actual en Google. Sin compromiso ni venta agresiva.",
+    ],
+    [
+      "Auditoría y estrategia",
+      "Analizo tu web en profundidad: técnica, contenido, autoridad y competencia. Te entrego un plan de acción con keywords objetivo, acciones priorizadas por impacto y timeline realista.",
+    ],
+    [
+      "Ejecución mensual",
+      "Cada mes implementamos las acciones de mayor impacto: optimizaciones técnicas, contenido estratégico, link building y SEO local. Todo documentado y medible.",
+    ],
+    [
+      "Reporting transparente",
+      "Informe mensual con posiciones, tráfico orgánico y conversiones. Reunión de seguimiento para revisar qué funciona, qué ajustar y cuáles son los próximos pasos.",
+    ],
+  ],
+  ctaButtonText: "Reservar consulta gratis",
+  ctaSecondaryText: "Contactar por WhatsApp",
+  urgencyMessage: "Disponibilidad limitada — solo 3 proyectos nuevos al mes",
+  trustStat: "GDE & MVP certificado",
+
+  extendedSections: [
+    {
+      heading: "Mi enfoque como consultor SEO",
+      content: `Hay muchos consultores SEO. La mayoría aplican la misma fórmula: auditoría con Screaming Frog, keyword research con Ahrefs, link building con directorios genéricos. Funciona, pero es lo mínimo.
+
+Mi enfoque va un paso más allá. Combino el SEO técnico tradicional con un conocimiento profundo de cómo funcionan los algoritmos de Google a nivel de ingeniería. Las certificaciones GDE y MVP no se dan por saber usar herramientas — se dan por entender la tecnología a nivel de código.
+
+Esto se traduce en ventajas prácticas: puedo implementar datos estructurados avanzados que otros consultores no tocan, optimizar el rendimiento web a nivel de código (no solo con plugins), y anticipar cambios de algoritmo basándome en las señales técnicas que Google publica en sus repositorios abiertos.
+
+No es magia. Es conocimiento técnico aplicado al SEO. Y eso marca una diferencia real en los resultados.`,
+    },
+    {
+      heading: "Consultor SEO en Córdoba: el valor del conocimiento local",
+      content: `Córdoba tiene algo que la hace especial para el SEO local: es una ciudad con identidad propia fuerte, un mercado local activo y una competencia online que, aunque creciente, todavía está por debajo de ciudades como Sevilla, Málaga o Madrid.
+
+Eso significa que un negocio cordobés que invierta en SEO ahora tiene una ventana de oportunidad. Las posiciones en Google para búsquedas locales en Córdoba son accesibles con una inversión razonable y una estrategia bien ejecutada.
+
+Como consultor SEO basado en Córdoba, tengo acceso directo al pulso del mercado. Sé qué sectores están creciendo, qué zonas de la ciudad tienen mayor actividad comercial (Centro, Brillante, Zoco, Ciudad Jardín, Levante, Polígono de Chinales), y cómo buscan los cordobeses cuando necesitan un servicio.
+
+Esa información no aparece en ninguna herramienta SEO. Es conocimiento local que solo tienes si vives y trabajas aquí.`,
+    },
+    {
+      heading: "¿Para qué tipo de negocios funciona el SEO en Córdoba?",
+      content: `El SEO local funciona especialmente bien para negocios que dependen de clientes en su zona geográfica. En Córdoba, los sectores donde he visto mayor retorno son:
+
+Hostelería y restauración: la búsqueda "restaurante Córdoba" tiene miles de búsquedas mensuales. Aparecer en el Local Pack de Google Maps puede llenar un local en temporada baja.
+
+Servicios profesionales: abogados, dentistas, fisioterapeutas, psicólogos, gestores. Son búsquedas con alta intención de contratación y ticket medio alto. El SEO aquí tiene un ROI brutal.
+
+Inmobiliarias: "pisos en venta Córdoba", "inmobiliaria Córdoba" — keywords con volumen alto y clientes que están listos para tomar decisiones económicas importantes.
+
+Comercio local: tiendas especializadas, comercios del centro, negocios de barrio. El SEO local les da visibilidad frente a las grandes plataformas.
+
+Empresas B2B: consultoría, servicios industriales, proveedores. Aunque el volumen de búsqueda es menor, cada lead tiene un valor económico muy alto.
+
+Si tu negocio encaja en alguno de estos perfiles y aún no tienes presencia orgánica en Google, estás dejando dinero en la mesa cada día.`,
+    },
+  ],
+};
+
+/* -------------------------------------------------------------------------- */
 /*  Override registry                                                         */
 /* -------------------------------------------------------------------------- */
 
 const cityOverrides: Record<string, ServiceContentOverride> = {
   "cordoba/posicionamiento-web": cordobaPosicionamientoWeb,
+  "cordoba/agencia-seo": cordobaAgenciaSeo,
+  "cordoba/consultor-seo": cordobaConsultorSeo,
 };
 
 /**
