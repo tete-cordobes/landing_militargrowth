@@ -92,27 +92,25 @@ function buildBreadcrumbList(
       {
         "@type": "ListItem",
         position: 2,
-        name: city.ccaa,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: city.provincia,
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
         name: content.h1,
+        item: pageUrl,
       },
     ],
   };
 }
 
 function buildReviews(pageUrl: string): Record<string, unknown>[] {
+  const itemReviewed = {
+    "@type": "LocalBusiness",
+    "@id": `${BASE_URL}/#localbusiness`,
+    name: "Jose Gilarte — Consultor SEO",
+  };
+
   return [
     {
       "@type": "Review",
       "@id": `${pageUrl}#review-1`,
+      itemReviewed,
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       author: { "@type": "Person", name: "Carlos M." },
       reviewBody: "Excelente trabajo de posicionamiento. En 6 meses duplicamos el tráfico orgánico.",
@@ -120,6 +118,7 @@ function buildReviews(pageUrl: string): Record<string, unknown>[] {
     {
       "@type": "Review",
       "@id": `${pageUrl}#review-2`,
+      itemReviewed,
       reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
       author: { "@type": "Person", name: "Laura S." },
       reviewBody: "Profesionalidad y resultados reales. La mejor inversión en marketing digital.",
