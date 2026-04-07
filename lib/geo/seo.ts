@@ -209,16 +209,31 @@ function buildPerson(): Record<string, unknown> {
       addressRegion: "Andalucía",
       addressCountry: "ES",
     },
-    alumniOf: {
-      "@type": "Organization",
-      name: "Data SEO Academy",
-      url: "https://dataseoacademy.com",
-    },
+    alumniOf: [
+      {
+        "@type": "EducationalOrganization",
+        name: "Data SEO Academy",
+        url: "https://dataseoacademy.com",
+      },
+      {
+        "@type": "EducationalOrganization",
+        name: "ENAE Business School",
+        url: "https://www.enae.es",
+      },
+    ],
     worksFor: {
       "@type": "Organization",
       name: "Jose Gilarte — Consultor SEO",
       url: BASE_URL,
     },
+    memberOf: [
+      {
+        "@type": "Organization",
+        name: "Data SEO Academy",
+        url: "https://dataseoacademy.com",
+        description: "Co-Founder & SEO Teacher — Python aplicado a SEO",
+      },
+    ],
     knowsAbout: [
       "SEO",
       "Posicionamiento Web",
@@ -227,10 +242,30 @@ function buildPerson(): Record<string, unknown> {
       "Marketing Digital",
       "Google Search Console",
       "Inteligencia Artificial",
+      "Automatización con IA",
       "Growth Hacking",
       "Python para SEO",
+      "Data Analytics para SEO",
+      "n8n",
+      "Make",
+      "Claude Code",
+      "Flowise",
       "Next.js",
-      "Automatización",
+      "Martech",
+      "CRO",
+    ],
+    hasOccupation: [
+      {
+        "@type": "Occupation",
+        name: "Consultor SEO",
+        occupationalCategory: "Marketing Digital",
+      },
+      {
+        "@type": "Occupation",
+        name: "Profesor de SEO y Automatización con IA",
+        description: "Profesor en ENAE Business School (Congreso ENAE Digital Meeting) y Data SEO Academy. Imparte formación sobre Python aplicado a SEO, automatizaciones con n8n, Make, Claude Code y Flowise.",
+        educationRequirements: "Google Developer Expert, Microsoft MVP",
+      },
     ],
     hasCredential: [
       {
@@ -259,6 +294,7 @@ function buildPerson(): Record<string, unknown> {
       "https://x.com/Jose_Gilartete",
       "https://www.youtube.com/@JoseGilarte",
       "https://dataseoacademy.com/nosotros/",
+      "https://www.enae.es/congreso-marketing-digital-meeting-enae/",
       "https://www.youtube.com/watch?v=E69WnobrFao",
       "https://www.youtube.com/watch?v=ZJNjz95ZXqo",
     ],
