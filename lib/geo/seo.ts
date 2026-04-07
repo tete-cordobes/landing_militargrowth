@@ -149,15 +149,7 @@ function buildProfessionalService(
         name: city.ccaa,
       },
     },
-    provider: {
-      "@type": "Person",
-      name: "Jose Gilarte",
-      jobTitle: JOB_TITLE_MAP[locale],
-      url: BASE_URL,
-      sameAs: [
-        "https://es.linkedin.com/in/jose-gilarte-alvarez",
-      ],
-    },
+    provider: { "@id": `${BASE_URL}/#person` },
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.9",
@@ -168,10 +160,11 @@ function buildProfessionalService(
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
+      telephone: "+34619955181",
       email: "jose@josegilarte.es",
       availableLanguage: ["Spanish", "English"],
     },
-    priceRange: "€€",
+    priceRange: "€€€",
   };
 }
 
@@ -190,6 +183,85 @@ function buildFaqPage(
         text: answer,
       },
     })),
+  };
+}
+
+/**
+ * Person schema — Jose Gilarte EEAT signals.
+ * Included in every geo page to establish authoritativeness.
+ */
+function buildPerson(): Record<string, unknown> {
+  return {
+    "@type": "Person",
+    "@id": `${BASE_URL}/#person`,
+    name: "Jose Gilarte",
+    alternateName: "Jose Gilarte Alvarez",
+    jobTitle: "Consultor SEO · Google Developer Expert · Microsoft MVP",
+    description:
+      "Consultor SEO en Córdoba con más de 8 años de experiencia. Google Developer Expert (GDE) y Microsoft MVP. Especialista en posicionamiento web, SEO local, marketing digital e inteligencia artificial aplicada al SEO.",
+    url: BASE_URL,
+    image: `${BASE_URL}/images/jose-gilarte.jpg`,
+    telephone: "+34619955181",
+    email: "jose@josegilarte.es",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Córdoba",
+      addressRegion: "Andalucía",
+      addressCountry: "ES",
+    },
+    alumniOf: {
+      "@type": "Organization",
+      name: "Data SEO Academy",
+      url: "https://dataseoacademy.com",
+    },
+    worksFor: {
+      "@type": "Organization",
+      name: "Jose Gilarte — Consultor SEO",
+      url: BASE_URL,
+    },
+    knowsAbout: [
+      "SEO",
+      "Posicionamiento Web",
+      "SEO Local",
+      "SEO Técnico",
+      "Marketing Digital",
+      "Google Search Console",
+      "Inteligencia Artificial",
+      "Growth Hacking",
+      "Python para SEO",
+      "Next.js",
+      "Automatización",
+    ],
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "certification",
+        name: "Google Developer Expert (GDE)",
+        recognizedBy: {
+          "@type": "Organization",
+          name: "Google",
+          url: "https://developers.google.com/community/experts",
+        },
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "certification",
+        name: "Microsoft Most Valuable Professional (MVP)",
+        recognizedBy: {
+          "@type": "Organization",
+          name: "Microsoft",
+          url: "https://mvp.microsoft.com",
+        },
+      },
+    ],
+    sameAs: [
+      "https://es.linkedin.com/in/jose-gilarte-alvarez",
+      "https://x.com/Jose_Gilartete",
+      "https://www.youtube.com/@JoseGilarte",
+      "https://dataseoacademy.com/nosotros/",
+      "https://www.youtube.com/watch?v=E69WnobrFao",
+      "https://www.youtube.com/watch?v=ZJNjz95ZXqo",
+    ],
   };
 }
 
@@ -225,15 +297,7 @@ function buildLocalBusiness(pageUrl: string): Record<string, unknown> {
       { "@type": "AdministrativeArea", name: "Andalucía" },
       { "@type": "Country", name: "España" },
     ],
-    founder: {
-      "@type": "Person",
-      name: "Jose Gilarte",
-      jobTitle: "Consultor SEO · GDE & MVP",
-      url: BASE_URL,
-      sameAs: [
-        "https://es.linkedin.com/in/jose-gilarte-alvarez",
-      ],
-    },
+    founder: { "@id": `${BASE_URL}/#person` },
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -263,6 +327,7 @@ export function generateGeoSchema(input: SchemaInput): Record<string, unknown> {
   const graph: Record<string, unknown>[] = [
     buildWebPage(pageUrl, locale, slug, content),
     buildBreadcrumbList(pageUrl, locale, slug, city, content),
+    buildPerson(),
     buildProfessionalService(pageUrl, locale, service, city, content),
     ...buildReviews(pageUrl),
   ];
