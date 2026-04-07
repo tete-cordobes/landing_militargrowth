@@ -205,7 +205,7 @@ function buildLocalBusiness(pageUrl: string): Record<string, unknown> {
     description:
       "Consultor SEO en Córdoba con 8+ años de experiencia. Google Developer Expert y Microsoft MVP. Posicionamiento web, SEO local e inteligencia artificial para empresas.",
     url: BASE_URL,
-    telephone: "+34600000000",
+    telephone: "+34619955181",
     email: "jose@josegilarte.es",
     image: `${BASE_URL}/images/jose-gilarte.jpg`,
     priceRange: "€€€",
