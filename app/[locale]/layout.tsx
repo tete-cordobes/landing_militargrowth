@@ -33,17 +33,11 @@ export const metadata: Metadata = {
     "Especialista en SEO, Marketing Digital y Desarrollo Web con +8 años de experiencia. Estrategias basadas en datos que transforman visitantes en clientes.",
   metadataBase: new URL("https://josegilarte.es"),
   alternates: {
-    canonical: "/",
-    languages: {
-      es: "/es",
-      en: "/en",
-      "x-default": "/es",
-    },
+    canonical: "/es",
   },
   openGraph: {
     type: "website",
     locale: "es_ES",
-    alternateLocale: "en_US",
     siteName: "Jose Gilarte",
     title: "Jose Gilarte | Especialista SEO & Marketing Digital",
     description:

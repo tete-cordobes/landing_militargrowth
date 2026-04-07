@@ -31,7 +31,6 @@ export function generateStaticParams() {
     if (slugs.has(slug)) continue;
     slugs.add(slug);
     params.push({ locale: "es", slug });
-    params.push({ locale: "en", slug });
   }
 
   return params;
@@ -64,18 +63,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title,
     description,
     alternates: {
-      canonical,
-      languages: {
-        es: `/es/${slug}`,
-        en: `/en/${slug}`,
-      },
+      canonical: `https://josegilarte.es/es/${slug}`,
     },
     openGraph: {
       title,
       description,
       url: canonical,
       type: "website",
-      locale: locale === "es" ? "es_ES" : "en_US",
+      locale: "es_ES",
       siteName: "Jose Gilarte",
     },
     robots: { index: true, follow: true },

@@ -21,28 +21,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1.0,
     },
-    {
-      url: `${BASE_URL}/en`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 1.0,
-    },
   ];
 
-  const geoPages: MetadataRoute.Sitemap = geoUrls.flatMap((geo) => [
-    {
-      url: `${BASE_URL}/es${geo.urlEs}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: TIER_PRIORITY[geo.tier],
-    },
-    {
-      url: `${BASE_URL}/en${geo.urlEn}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: TIER_PRIORITY[geo.tier],
-    },
-  ]);
+  const geoPages: MetadataRoute.Sitemap = geoUrls.map((geo) => ({
+    url: `${BASE_URL}/es${geo.urlEs}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: TIER_PRIORITY[geo.tier],
+  }));
 
   return [...rootPages, ...geoPages];
 }

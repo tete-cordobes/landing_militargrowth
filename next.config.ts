@@ -19,6 +19,20 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/en",
+        destination: "/es",
+        permanent: true,
+      },
+      {
+        source: "/en/:path*",
+        destination: "/es/:path*",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     formats: ["image/avif", "image/webp"],
   },
