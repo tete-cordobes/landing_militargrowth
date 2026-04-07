@@ -11,6 +11,7 @@ import {
   SERVICE_NAMES,
 } from "@/lib/geo";
 import { getServiceContent, getSectionLabels } from "@/lib/geo/content";
+import { getCityOverride } from "@/lib/geo/city-overrides";
 import { generateGeoSchema } from "@/lib/geo/seo";
 import { LeadForm } from "@/components/geo/lead-form";
 
@@ -49,10 +50,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const { service, city } = parsed;
+  const override = getCityOverride(city.slug, service.slugEs);
   const content = getServiceContent(service.slugEs, locale as "es" | "en");
 
-  const title = content.title(city.name);
-  const description = content.metaDescription(
+  const title = override?.title ?? content.title(city.name);
+  const description = override?.metaDescription ?? content.metaDescription(
     city.name,
     city.provincia,
     city.ccaa,
@@ -151,6 +153,7 @@ export default async function GeoLandingPage({ params }: Props) {
   const { service, city } = parsed;
   const loc = locale as "es" | "en";
   const content = getServiceContent(service.slugEs, loc);
+  const override = getCityOverride(city.slug, service.slugEs);
   const labels = getSectionLabels(loc);
 
   const provinceCities = getRelatedCitiesInProvince(
@@ -165,20 +168,33 @@ export default async function GeoLandingPage({ params }: Props) {
   );
   const otherServices = getOtherServicesForCity(city.slug, service.slugEs);
 
-  const faqs = content.faqs(city.name, city.provincia);
+  const faqs = override?.faqs ?? content.faqs(city.name, city.provincia);
 
   const serviceNameLocalized =
     SERVICE_NAMES[service.slugEs as keyof typeof SERVICE_NAMES]?.[loc] ??
     service.slugEs;
+
+  // Resolve all content — override takes priority over template
+  const resolvedH1 = override?.h1 ?? content.h1(city.name);
+  const resolvedIntro = override?.intro ?? content.intro(city.name, city.provincia, city.ccaa);
+  const resolvedWhyTitle = override?.whyTitle ?? content.whyTitle(city.name);
+  const resolvedWhyPoints = override?.whyPoints ?? content.whyPoints(city.name);
+  const resolvedProcessSteps = override?.processSteps ?? content.processSteps;
+  const resolvedCtaTitle = override?.ctaTitle ?? content.ctaTitle(city.name);
+  const resolvedCtaDescription = override?.ctaDescription ?? content.ctaDescription(city.name);
+  const resolvedCtaButtonText = override?.ctaButtonText ?? content.ctaButtonText;
+  const resolvedCtaSecondaryText = override?.ctaSecondaryText ?? content.ctaSecondaryText;
+  const resolvedUrgencyMessage = override?.urgencyMessage ?? content.urgencyMessage;
+  const extendedSections = override?.extendedSections ?? [];
 
   const jsonLd = generateGeoSchema({
     service,
     city,
     locale: loc,
     content: {
-      title: content.title(city.name),
-      description: content.metaDescription(city.name, city.provincia, city.ccaa),
-      h1: content.h1(city.name),
+      title: override?.title ?? content.title(city.name),
+      description: override?.metaDescription ?? content.metaDescription(city.name, city.provincia, city.ccaa),
+      h1: resolvedH1,
       faqs,
     },
   });
@@ -255,7 +271,7 @@ export default async function GeoLandingPage({ params }: Props) {
                   itemType="https://schema.org/ListItem"
                 >
                   <span itemProp="name" className="text-primary font-medium">
-                    {content.h1(city.name)}
+                    {resolvedH1}
                   </span>
                   <meta itemProp="position" content="4" />
                 </li>
@@ -267,10 +283,10 @@ export default async function GeoLandingPage({ params }: Props) {
               {/* Text - 60% */}
               <div className="lg:col-span-3">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                  {content.h1(city.name)}
+                  {resolvedH1}
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                  {content.intro(city.name, city.provincia, city.ccaa)}
+                  {resolvedIntro}
                 </p>
               </div>
 
@@ -281,8 +297,8 @@ export default async function GeoLandingPage({ params }: Props) {
                   service={serviceNameLocalized}
                   city={city.name}
                   locale={loc}
-                  ctaButtonText={content.ctaButtonText}
-                  ctaSecondaryText={content.ctaSecondaryText}
+                  ctaButtonText={resolvedCtaButtonText}
+                  ctaSecondaryText={resolvedCtaSecondaryText}
                 />
               </div>
             </div>
@@ -319,7 +335,7 @@ export default async function GeoLandingPage({ params }: Props) {
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {content.processSteps.map(([title, desc], i) => (
+              {resolvedProcessSteps.map(([title, desc], i) => (
                 <div key={i} className="relative p-6 rounded-xl border-military bg-card">
                   <div className="mb-4 flex size-10 items-center justify-center rounded-full bg-primary/10">
                     <span className="text-lg font-bold text-primary">{i + 1}</span>
@@ -338,11 +354,11 @@ export default async function GeoLandingPage({ params }: Props) {
         <section className="py-20 bg-gradient-military-section-alt">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
-              {content.whyTitle(city.name)}
+              {resolvedWhyTitle}
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {content.whyPoints(city.name).map((point, i) => (
+              {resolvedWhyPoints.map((point, i) => (
                 <div
                   key={i}
                   className="flex gap-4 p-6 rounded-xl border-military bg-card"
@@ -370,6 +386,32 @@ export default async function GeoLandingPage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        {/* ================================================================ */}
+        {/*  4b. Extended content sections (city overrides only)             */}
+        {/* ================================================================ */}
+        {extendedSections.map((section, i) => (
+          <section
+            key={i}
+            className={`py-20 ${i % 2 === 0 ? "bg-gradient-military-section" : "bg-gradient-military-section-alt"}`}
+          >
+            <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+                {section.heading}
+              </h2>
+              <div className="prose prose-lg prose-invert max-w-none">
+                {section.content.split("\n\n").map((paragraph, j) => (
+                  <p
+                    key={j}
+                    className="text-muted-foreground leading-relaxed mb-6"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </section>
+        ))}
 
         {/* ================================================================ */}
         {/*  5. Social Proof                                                 */}
@@ -464,10 +506,10 @@ export default async function GeoLandingPage({ params }: Props) {
           <div className="mx-auto max-w-4xl px-4">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                {content.ctaTitle(city.name)}
+                {resolvedCtaTitle}
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                {content.ctaDescription(city.name)}
+                {resolvedCtaDescription}
               </p>
             </div>
 
@@ -477,11 +519,11 @@ export default async function GeoLandingPage({ params }: Props) {
                 service={serviceNameLocalized}
                 city={city.name}
                 locale={loc}
-                ctaButtonText={content.ctaButtonText}
-                ctaSecondaryText={content.ctaSecondaryText}
+                ctaButtonText={resolvedCtaButtonText}
+                ctaSecondaryText={resolvedCtaSecondaryText}
               />
               <p className="mt-4 text-center text-sm font-medium text-primary/70">
-                {content.urgencyMessage}
+                {resolvedUrgencyMessage}
               </p>
             </div>
           </div>
