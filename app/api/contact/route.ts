@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     const data = contactSchema.parse(body);
 
     const webhook = await fetch(
-      "https://hook.eu1.make.com/mlfubzmrrhtk4dlg8vm72rd43qqhyfo2",
+      "https://n8n.josegilarte.es/webhook/landing-tete",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
